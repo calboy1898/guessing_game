@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="g_g.js"></script>
   <link rel="stylesheet" type="text/css" href="g_g.css">
   <title>Guessing Game</title>
 </head>
@@ -9,18 +11,17 @@
 
   <h1>Fullstack Guessing Game</h1>
   <h2>Step right up and see if you can read my mind!</h2>
+  <h2>You only get 5 Guesses!<h2>
 
-  <form>
 	
 	<br>
-	<input type="text" placeholder="Enter a Value" style="font-size:25px">
-	</form>
+	<input id="numinput" type="text" placeholder="Enter Number (1-100)" style="font-size:25px">
 	<br>
-	<button type="button">Submit Your Guess</button>	
+	<button id="button1" type="button">Submit Your Guess</button>	
 	<br>
-	<button type="button">Give Me A Hint</button>
+	<button id="button2" type="button">Give Me A Hint</button>
 	<br>
-	<button type="button">Play Again</button>
+	<button id="button3" type="button">Play Again</button>
 
 </body>
 
