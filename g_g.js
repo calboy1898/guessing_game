@@ -27,6 +27,8 @@ $(document).ready(function(){
 				var hottercolder=" and getting colder";	
 			} else if (newdiff<olddiff){
 				var hottercolder=" and getting hotter";
+			} else {
+				var hottercolder=" and are staying tepid";
 			}
 		}
 		//tells player to guess higher or lower
@@ -50,14 +52,14 @@ $(document).ready(function(){
 		if(guessarray.length>=5&&guessnum!==mynum){
 			$("p").remove();
 			$("body").append("<p>Game Over! Please Restart Game!</p>");
+			$("body").append("<p>The correct number was "+mynum+"!</p>");
 			$("body").css({"background-color":"#444444"});
 		}
 		$('#numinput').val('');
 		} else if (dupguess===true) {
 			alert("You have alredy guessed that number!");
-			$('#numinput').val('');//.placeholder();
-		//$("body").append("<p>You have already guessed that number!</p>");
-		} else if (hintrepeat===true){
+			$('#numinput').val('');
+			} else if (hintrepeat===true){
 			alert("Please restart the game!");
 		} else {
 			alert("Please Enter a Valid Integer 1-100");
