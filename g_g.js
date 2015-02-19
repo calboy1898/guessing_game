@@ -68,6 +68,7 @@ $(document).ready(function(){
 			$("#numinput").val('');//.placeholder();
 		//$("body").append("<p>Please Enter a Valid Integer 1-100</p>");
 		}
+		$("#numinput").focus();
 	}
 	//what happens when enter is pressed
 	$(document).keypress(function(event){
@@ -87,6 +88,7 @@ $(document).ready(function(){
 			$("body").append(youlose);
 			hintrepeat=true;
 		}
+		$("#numinput").focus();
 	})
 
 	//defining action of "Play Again" button
@@ -98,6 +100,7 @@ $(document).ready(function(){
 		$("body").css({"background-color":"#444444"});
 		hintrepeat=false;
 		$("#numinput").val('');
+		$("#numinput").focus();
 	})
 })
 
