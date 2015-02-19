@@ -47,16 +47,12 @@ $(document).ready(function(){
 			var hotcold="hot";
 			$("body").append("<p>Guess: "+x+", you are "+hotcold+""+hottercolder+", "+higherlower+"!</p>");
 		}
-		//$("body").append("<p>You guessed "+x+" and you are "+hotcold+"!</p>");
-		
-		if(guessarray.length>=5){
+		if(guessarray.length>=5&&guessnum!==mynum){
 			$("p").remove();
 			$("body").append("<p>Game Over! Please Restart Game!</p>");
 			$("body").css({"background-color":"#444444"});
 		}
-		//var guesstext=$("<p>You guessed "+x+" and you are "+hotcold+"!</p>");
-		//$("body").append("<p>You guessed "+x+" and you are "+hotcold+"!</p>");
-		$('#numinput').val('');//.placeholder();
+		$('#numinput').val('');
 		} else if (dupguess===true) {
 			alert("You have alredy guessed that number!");
 			$('#numinput').val('');//.placeholder();
@@ -65,8 +61,7 @@ $(document).ready(function(){
 			alert("Please restart the game!");
 		} else {
 			alert("Please Enter a Valid Integer 1-100");
-			$("#numinput").val('');//.placeholder();
-		//$("body").append("<p>Please Enter a Valid Integer 1-100</p>");
+			$("#numinput").val('');
 		}
 		$("#numinput").focus();
 	}
@@ -99,8 +94,8 @@ $(document).ready(function(){
 		guesscount=0;
 		$("body").css({"background-color":"#444444"});
 		hintrepeat=false;
-		$("#numinput").val('');
 		$("#numinput").focus();
+		$("#numinput").val('');
 	})
 })
 
